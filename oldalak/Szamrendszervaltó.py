@@ -1,0 +1,2 @@
+print("Mükszik")
+input("")
