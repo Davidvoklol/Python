@@ -31,8 +31,9 @@ class Window:
         self.time.after(200, self.thetime)
     
     def szamrendszer(self):
-        os.startfile("oldalak\\Szamrendszervaltó.py")
+        os.startfile("oldalak\\szamrendszer.py")
         self.window.destroy()
+        
         
 
 Window("black")
