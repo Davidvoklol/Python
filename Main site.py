@@ -21,7 +21,7 @@ class Window:
         self.menuframe.columnconfigure(2, weight=1)
         self.menuframe.pack(fill="x", padx=70, pady=50)
 
-        self.szamrendszer = tk.Button(self.menuframe, command=self.szamrendszer, text="Számrendszer vátó", bg="gray", fg="black", activebackground="gray", activeforeground="black", font=("Consolas", 20, "bold")).grid(row=0, column=0, sticky=tk.W + tk.E)
+        self.szamrendszer = tk.Button(self.menuframe, command=self.szamrendszer, text="Számrendszer váltó", bg="gray", fg="black", activebackground="gray", activeforeground="black", font=("Consolas", 20, "bold")).grid(row=0, column=0, sticky=tk.W + tk.E)
         self.thetime()
         self.window.mainloop()
     
