@@ -5,7 +5,7 @@ class Gui:
 	def __init__(self):
 		self.root = tk.Tk()
 		self.root.geometry("400x300")
-		self.root.title("Egyes számrendszer")
+		self.root.title("Számrendszer váltás")
 		
 		
 		self.input_value = ""
@@ -19,10 +19,10 @@ class Gui:
 		self.frame.pack(fill="x", padx=40, pady=20)
 		
 		self.input = tk.Label(self.frame, text="", height=1, width=5, bg="black", fg="white", font=("Consolas", 18))
-		self.input.grid(row=0, columnspan=4, sticky= tk.W + tk.E, padx=10, pady=10)
+		self.input.grid(row=0, column=1, columnspan=3, sticky= tk.W + tk.E, padx=10, pady=10)
 
 		self.output = tk.Label(self.frame, height=1, width=5, text="", bg="black", fg="white", font=("Consolas", 18))
-		self.output.grid(row=1, columnspan=4, sticky= tk.W + tk.E, padx=10, pady=10)
+		self.output.grid(row=1, column=1, columnspan=3, sticky= tk.W + tk.E, padx=10, pady=10)
 		
 		self.one = tk.Button(self.frame, command=lambda: self.get_value("1"), text="1", font=("Consolas", 15))
 		self.one.grid(row=2, column=0, sticky= tk.W + tk.E)
@@ -54,12 +54,12 @@ class Gui:
 		self.root.mainloop()
 	
 	def get_value(self, value):
-		if len(self.input_value) != 20:
+		if len(self.output.cget("text")) < 15:
 			self.input_value += value
 			self.input.config(text=self.input_value)
 			self.atvaltas()
 		else:
-			tk.messagebox.showinfo(self.root, message="valami nem jo gec\n(elérted a max karakterszámot)")
+			pass
 	
 	def clear(self):
 		self.input_value = ""
