@@ -65,7 +65,7 @@ class Gui:
 		self.input_value = ""
 		self.input.config(text="")
 		self.output_value = ""
-		self.atvaltas
+		self.output.config(text="")
 
 	def backspace(self):
 		self.input_value = self.input_value[0:len(self.input_value) - 1]
@@ -79,6 +79,7 @@ class Gui:
 				self.output_value += str(a % 2)
 				a = int(a / 2)
 			self.output.config(text=self.output_value)
+			self.output_value = ""
 		else:
 			self.output_value = ""
 			self.output.config(text="")
